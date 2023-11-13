@@ -160,7 +160,7 @@ export default function Home() {
           </article>
         </section>
 
-        <footer className="mb-0 w-full rounded-t-2xl bg-[#c2425e] sm:w-[85%] sm:max-w-[800px]">
+        <footer className="mb-0 w-full rounded-t-2xl bg-red-500 sm:w-[85%] sm:max-w-[800px]">
           <article className="flex flex-col items-center p-[2%] text-center">
             <h2 className="max-w-[80%] text-xl font-medium tracking-wide">
               built by somafet loved by my mum
