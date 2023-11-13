@@ -10,6 +10,7 @@
 
 html,
 body {
+  min-height: 100lvh;
   background-color: #21255b;
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
