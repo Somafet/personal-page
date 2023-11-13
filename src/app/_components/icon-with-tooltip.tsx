@@ -15,7 +15,7 @@ export function IconWithTooltip({ icon, tooltipText }: IconWithTooltipProps) {
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger>{icon}</TooltipTrigger>
+        <TooltipTrigger className="max-w-min">{icon}</TooltipTrigger>
         <TooltipContent>
           <p>{tooltipText}</p>
         </TooltipContent>

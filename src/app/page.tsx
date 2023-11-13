@@ -70,35 +70,49 @@ export default function Home() {
               Skills
             </h2>
           </article>
-          <article className="flex justify-between rounded-b-2xl bg-[#2299bb] p-[2%]">
-            <IconWithTooltip
-              icon={<HTML5Icon height={48} width={48} />}
-              tooltipText="HTML5"
-            />
-            <IconWithTooltip
-              icon={<CSS3Icon height={48} width={48} />}
-              tooltipText="CSS3"
-            />
-            <IconWithTooltip
-              icon={<JavascriptIcon height={48} width={48} />}
-              tooltipText="Javascript"
-            />
-            <IconWithTooltip
-              icon={<TypescriptIcon height={48} width={48} />}
-              tooltipText="Typescript"
-            />
-            <IconWithTooltip
-              icon={<NodeJSIcon height={48} width={48} />}
-              tooltipText="NodeJS"
-            />
-            <IconWithTooltip
-              icon={<ExpressJSIcon height={48} width={48} />}
-              tooltipText="ExpressJS"
-            />
-            <IconWithTooltip
-              icon={<ReactIcon height={48} width={48} />}
-              tooltipText="React"
-            />
+          <article className="grid grid-cols-6 grid-rows-1 justify-center gap-2 rounded-b-2xl bg-[#2299bb] p-[2%] sm:grid-cols-7 sm:gap-0">
+            <div className="flex justify-center">
+              <IconWithTooltip
+                icon={<HTML5Icon height={48} width={48} />}
+                tooltipText="HTML5"
+              />
+            </div>
+            <div className="flex justify-center">
+              <IconWithTooltip
+                icon={<CSS3Icon height={48} width={48} />}
+                tooltipText="CSS3"
+              />
+            </div>
+            <div className="flex justify-center">
+              <IconWithTooltip
+                icon={<JavascriptIcon height={48} width={48} />}
+                tooltipText="Javascript"
+              />
+            </div>
+            <div className="flex justify-center">
+              <IconWithTooltip
+                icon={<TypescriptIcon height={48} width={48} />}
+                tooltipText="Typescript"
+              />
+            </div>
+            <div className="flex justify-center">
+              <IconWithTooltip
+                icon={<NodeJSIcon height={48} width={48} />}
+                tooltipText="NodeJS"
+              />
+            </div>
+            <div className="flex justify-center">
+              <IconWithTooltip
+                icon={<ExpressJSIcon height={48} width={48} />}
+                tooltipText="ExpressJS"
+              />
+            </div>
+            <div className="flex justify-center">
+              <IconWithTooltip
+                icon={<ReactIcon height={48} width={48} />}
+                tooltipText="React"
+              />
+            </div>
           </article>
         </section>
         <section className="w-full rounded-2xl bg-[#c2425e] sm:w-[85%] sm:max-w-[800px]">
