@@ -16,15 +16,22 @@ import VueIcon from "./_components/icons/vue-icon";
 import ProjectDisplay from "./_components/project-display";
 import LinkedInIcon from "./_components/icons/linkedin-icon";
 import EmailIcon from "./_components/icons/email-icon";
+import bg from "~/styles/bg.module.css";
+import { cn } from "~/lib/utils";
 
 export default function Home() {
   return (
     <main className="dark flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#21255b] to-[#15162c] pt-4 text-white">
       <div className="container mx-auto flex flex-col items-center space-y-6 px-4 sm:space-y-6 sm:px-6 md:space-y-8 lg:space-y-16 lg:px-8">
         <header className="flex w-full justify-center">
-          <div className="h-[350px] w-full rounded-2xl bg-pink-400 sm:h-[250px] sm:w-[85%] sm:max-w-[800px]">
+          <div
+            className={cn(
+              "h-[350px] w-full rounded-2xl bg-pink-400 sm:h-[250px] sm:w-[85%] sm:max-w-[800px]",
+              bg.bg,
+            )}
+          >
             <div className="flex h-full w-full flex-col content-start items-center justify-end overflow-hidden sm:flex-row sm:justify-center">
-              <h1 className="mb-4 text-5xl font-semibold transition-all hover:text-6xl sm:hover:text-6xl md:hover:text-8xl">
+              <h1 className="mb-4 text-5xl font-semibold text-[#21255b] transition-all hover:text-6xl sm:hover:text-6xl md:hover:text-8xl">
                 somafet
               </h1>
               <div className="h-[228px] w-[254px]"></div>

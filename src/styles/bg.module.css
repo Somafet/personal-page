@@ -1,0 +1,16 @@
+.bg {
+  background: url("../../public/image.jpeg") repeat-y;
+  background-position-x: 50%;
+  transition: none;
+  background-color: transparent;
+  animation: scrollForever 10s linear infinite;
+}
+
+@keyframes scrollForever {
+  from {
+    background-position-y: 0%;
+  }
+  to {
+    background-position-y: -1024px;
+  }
+}
