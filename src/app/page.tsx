@@ -21,7 +21,7 @@ import { cn } from "~/lib/utils";
 
 export default function Home() {
   return (
-    <main className="dark flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#21255b] to-[#15162c] pt-4 text-white">
+    <main className="dark flex min-h-screen flex-col items-center justify-center pt-4 text-white">
       <div className="container mx-auto flex flex-col items-center space-y-6 px-4 sm:space-y-6 sm:px-6 md:space-y-8 lg:space-y-16 lg:px-8">
         <header className="flex w-full justify-center">
           <div

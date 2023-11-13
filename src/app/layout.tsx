@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import { cookies } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import { cn } from "~/lib/utils";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,7 +25,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${poppins.variable}`}>
+      <body
+        className={cn(
+          `font-sans ${poppins.variable}`,
+          "bg-gradient-to-b from-[#21255b] to-[#15162c]",
+        )}
+      >
         <TRPCReactProvider cookies={cookies().toString()}>
           {children}
         </TRPCReactProvider>
