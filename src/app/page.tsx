@@ -69,6 +69,12 @@ export default function Home() {
             <h2 className="mb-4 max-w-[80%] text-xl font-medium tracking-wide">
               Skills
             </h2>
+            <p className="text-sm">
+              Funote: If you&#39;re looking for me and you&#39;ve read this far
+              then write{" "}
+              <span className="font-semibold">&ldquo;Watermelon&rdquo;</span>{" "}
+              somewhere in your message :)
+            </p>
           </article>
           <article className="grid grid-cols-6 grid-rows-1 justify-center gap-2 rounded-b-2xl bg-[#2299bb] p-[2%] sm:grid-cols-7 sm:gap-0">
             <div className="flex justify-center">
