@@ -1,9 +1,9 @@
 .bg {
-  background: url("../../public/image.jpeg") repeat-y;
+  background: url("../../public/bg.jpeg") repeat-y;
   background-position-x: 50%;
   transition: none;
   background-color: transparent;
-  animation: scrollForever 10s linear infinite;
+  animation: scrollForever 15s linear infinite;
 }
 
 @keyframes scrollForever {

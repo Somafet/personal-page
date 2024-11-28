@@ -1,10 +1,8 @@
 import "~/styles/globals.css";
 
 import { Poppins } from "next/font/google";
-import { cookies } from "next/headers";
 
-import { TRPCReactProvider } from "~/trpc/react";
-import { cn } from "~/lib/utils";
+import { twMerge } from "tailwind-merge";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -28,16 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(
+        className={twMerge(
           `font-sans ${poppins.variable}`,
           "bg-gradient-to-b from-[#21255b] to-[#15162c]",
         )}
       >
-        <TRPCReactProvider cookies={cookies().toString()}>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </TRPCReactProvider>
+        {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

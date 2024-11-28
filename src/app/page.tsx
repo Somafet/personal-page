@@ -3,7 +3,6 @@ import { IconWithTooltip } from "./_components/icon-with-tooltip";
 import CSS3Icon from "./_components/icons/css3-icon";
 import ExpressJSIcon from "./_components/icons/express-js-icon";
 import GithubIcon from "./_components/icons/github-icon";
-import GraphQLIcon from "./_components/icons/graphql-icon";
 import HTML5Icon from "./_components/icons/html5-icon";
 import JavascriptIcon from "./_components/icons/javascript-icon";
 import NestJSIcon from "./_components/icons/nestjs-icon";
@@ -17,7 +16,9 @@ import ProjectDisplay from "./_components/project-display";
 import LinkedInIcon from "./_components/icons/linkedin-icon";
 import EmailIcon from "./_components/icons/email-icon";
 import bg from "~/styles/bg.module.css";
-import { cn } from "~/lib/utils";
+import { twMerge } from "tailwind-merge";
+import BitebyLogo from "./_components/icons/biteby-logo";
+import AngularIcon from "./_components/icons/angular-icon";
 
 export default function Home() {
   return (
@@ -25,8 +26,8 @@ export default function Home() {
       <div className="container mx-auto flex flex-col items-center space-y-6 px-4 sm:space-y-6 sm:px-6 md:space-y-8 lg:space-y-16 lg:px-8">
         <header className="flex w-full justify-center">
           <div
-            className={cn(
-              "h-[350px] w-full rounded-2xl bg-pink-400 sm:h-[250px] sm:w-[85%] sm:max-w-[800px]",
+            className={twMerge(
+              "h-[350px] w-full rounded-lg bg-pink-400 sm:h-[250px] sm:w-[85%] sm:max-w-[800px]",
               bg.bg,
             )}
           >
@@ -38,7 +39,7 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <section className="w-full rounded-2xl bg-[#8866ee] sm:w-[85%] sm:max-w-[800px]">
+        <section className="w-full rounded-lg bg-[#8866ee] sm:w-[85%] sm:max-w-[800px]">
           <article className="flex flex-col items-center p-[2%] text-center">
             <h2 className="mb-4 max-w-[80%] text-xl font-medium tracking-wide">
               I build full stack web applications for fun and also for a good
@@ -49,7 +50,7 @@ export default function Home() {
               <span className="font-semibold">2016</span>.
             </p>
           </article>
-          <article className="flex justify-evenly rounded-b-2xl bg-[#6644cc] p-[2%]">
+          <article className="flex justify-evenly rounded-b-lg bg-[#6644cc] p-[2%]">
             <Link href="https://github.com/Somafet">
               <IconWithTooltip icon={<GithubIcon />} tooltipText="GitHub" />
             </Link>
@@ -64,19 +65,19 @@ export default function Home() {
             </Link>
           </article>
         </section>
-        <section className="w-full rounded-2xl bg-[#44aadd] sm:w-[85%] sm:max-w-[800px]">
+        <section className="w-full rounded-lg bg-[#44aadd] sm:w-[85%] sm:max-w-[800px]">
           <article className="flex flex-col items-center p-[2%] text-center">
             <h2 className="mb-4 max-w-[80%] text-xl font-medium tracking-wide">
               Skills
             </h2>
             <p className="text-sm">
-              Funote: If you&#39;re looking for me and you&#39;ve read this far
-              then write{" "}
+              Fun Note: If you&#39;re looking for me and you&#39;ve read this
+              far then write{" "}
               <span className="font-semibold">&ldquo;Watermelon&rdquo;</span>{" "}
               somewhere in your message :)
             </p>
           </article>
-          <article className="grid grid-cols-6 grid-rows-1 justify-center gap-2 rounded-b-2xl bg-[#2299bb] p-[2%] sm:grid-cols-7 sm:gap-0">
+          <article className="grid grid-cols-6 grid-rows-1 justify-center gap-2 rounded-b-lg bg-[#2299bb] p-[2%] sm:grid-cols-7 sm:gap-0">
             <div className="flex justify-center">
               <IconWithTooltip
                 icon={<HTML5Icon height={48} width={48} />}
@@ -121,15 +122,15 @@ export default function Home() {
             </div>
           </article>
         </section>
-        <section className="w-full rounded-2xl bg-[#c2425e] sm:w-[85%] sm:max-w-[800px]">
+        <section className="w-full rounded-lg bg-[#c2425e] sm:w-[85%] sm:max-w-[800px]">
           <article className="flex flex-col items-center p-[2%] text-center">
             <h2 className="mb-4 max-w-[80%] text-xl font-medium tracking-wide">
               Projects
             </h2>
           </article>
-          <article className="flex flex-col content-between space-y-2 rounded-b-2xl bg-[#8b3043] p-[2%]">
+          <article className="flex flex-col content-between space-y-2 rounded-b-lg bg-[#8b3043] p-[2%] text-white">
             <ProjectDisplay
-              projectName="DineQR"
+              projectName={<BitebyLogo />}
               description="An at table ordering service for skipping the queues and finding the comfiest spots."
               techIcons={[
                 <IconWithTooltip
@@ -143,12 +144,51 @@ export default function Home() {
                   tooltipText="NestJS"
                 />,
                 <IconWithTooltip
-                  key="graphql"
-                  icon={<GraphQLIcon />}
-                  tooltipText="GraphQL"
+                  key="tailwind"
+                  icon={<TailwindIcon />}
+                  tooltipText="Tailwind CSS"
                 />,
               ]}
-              href="https://dineqr.hu"
+              href="https://biteby.io"
+            />
+            <ProjectDisplay
+              projectName="KLM - Air France"
+              description="Led the development of an internal front-end application for pilot training scheduling at KLM, utilizing Angular 18 and managing large data sets with data scientists."
+              techIcons={[
+                <IconWithTooltip
+                  key="angular"
+                  icon={<AngularIcon />}
+                  tooltipText="Angular"
+                />,
+                <IconWithTooltip
+                  key="tailwind"
+                  icon={<TailwindIcon />}
+                  tooltipText="Tailwind CSS"
+                />,
+              ]}
+              href="https://klm.com"
+            />
+            <ProjectDisplay
+              projectName="A/B Smartly"
+              description="At A/B Smartly, I worked as a Senior Software Engineer on enhancing the company's A/B testing SaaS platform."
+              techIcons={[
+                <IconWithTooltip
+                  key="vue2"
+                  icon={<VueIcon />}
+                  tooltipText="Vue"
+                />,
+                <IconWithTooltip
+                  key="tailwind"
+                  icon={<TailwindIcon />}
+                  tooltipText="Tailwind CSS"
+                />,
+                <IconWithTooltip
+                  key="react"
+                  icon={<ReactIcon />}
+                  tooltipText="React"
+                />,
+              ]}
+              href="https://absmartly.com"
             />
             <ProjectDisplay
               projectName="Dinge Technologies"
@@ -187,7 +227,7 @@ export default function Home() {
           </article>
         </section>
 
-        <footer className="mb-0 w-full rounded-t-2xl bg-red-500 sm:w-[85%] sm:max-w-[800px]">
+        <footer className="mb-0 w-full rounded-t-lg bg-red-500 sm:w-[85%] sm:max-w-[800px]">
           <article className="flex flex-col items-center p-[2%] text-center">
             <h2 className="max-w-[80%] text-xl font-medium tracking-wide">
               built by somafet loved by my mum
