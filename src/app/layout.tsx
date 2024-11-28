@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from "@vercel/analytics/react";
 import { type Metadata } from "next/types";
+import bg from "@public/bg.webp";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="preload" href={bg.src} as="image" />
       <body
         className={twMerge(
           `font-sans ${poppins.variable}`,
