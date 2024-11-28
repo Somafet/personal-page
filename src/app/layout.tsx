@@ -4,7 +4,6 @@ import { Poppins } from "next/font/google";
 
 import { twMerge } from "tailwind-merge";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { type Metadata } from "next/types";
 
 const poppins = Poppins({
@@ -60,7 +59,6 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
