@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { type Metadata } from "next/types";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -12,10 +13,36 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-export const metadata = {
-  title: "somafet",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://somafet.com"),
+  title: {
+    template: "%s | Soma Somorjai",
+    default: "Somafet | Soma Somorjai",
+  },
   description: "Personal portfolio of Soma Somorjai :)",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  keywords: [
+    "somafet",
+    "soma",
+    "somorjai",
+    "soma somorjai",
+    "personal portfolio",
+    "portfolio",
+    "web development",
+    "full stack",
+    "full stack web development",
+    "full stack web developer",
+    "web developer",
+    "web development portfolio",
+  ],
+  applicationName: "Somafet",
+  robots: "index, follow",
+  authors: [{ name: "Soma Somorjai", url: "https://somafet.com" }],
+  openGraph: {
+    type: "website",
+    url: "https://somafet.com",
+    title: "Somafet | Soma Somorjai",
+    description: "Personal portfolio of Soma Somorjai :)",
+  },
 };
 
 export default function RootLayout({
