@@ -1,5 +1,5 @@
 .bg {
-  background: url("../../public/bg.jpeg") repeat-y;
+  background: url("../../public/bg.webp") repeat-y;
   background-position-x: 50%;
   transition: none;
   background-color: transparent;
