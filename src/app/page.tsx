@@ -19,6 +19,9 @@ import bg from "~/styles/bg.module.css";
 import { twMerge } from "tailwind-merge";
 import BitebyLogo from "./_components/icons/biteby-logo";
 import AngularIcon from "./_components/icons/angular-icon";
+import DomainlyLogo from "../../public/domainly.png";
+import Image from "next/image";
+import PsqlIcon from "./_components/icons/psql-icon";
 
 export default function Home() {
   return (
@@ -129,6 +132,34 @@ export default function Home() {
             </h2>
           </article>
           <article className="flex flex-col content-between space-y-2 rounded-b-lg bg-[#8b3043] p-[2%] text-white">
+            <ProjectDisplay
+              projectName={
+                <div className="inline-flex items-center">
+                  <Image
+                    src={DomainlyLogo}
+                    alt={`Domainly`}
+                    width={304}
+                    height={304}
+                    className="h-12 w-auto"
+                  />
+                  <p className="ml-2 text-xl font-medium">Domainly</p>
+                </div>
+              }
+              description="Domainly is a For Sale By Owner (FSBO) platform for domain names."
+              techIcons={[
+                <IconWithTooltip
+                  key="next"
+                  icon={<NextJSIcon />}
+                  tooltipText="NextJS"
+                />,
+                <IconWithTooltip
+                  key="psql"
+                  icon={<PsqlIcon />}
+                  tooltipText="PostgreSQL"
+                />,
+              ]}
+              href="https://domainly.shop"
+            />
             <ProjectDisplay
               projectName={<BitebyLogo />}
               description="An at table ordering service for skipping the queues and finding the comfiest spots."
