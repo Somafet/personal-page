@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Link from "next/link";
 import { IconWithTooltip } from "./_components/icon-with-tooltip";
 import CSS3Icon from "./_components/icons/css3-icon";
@@ -22,6 +23,7 @@ import AngularIcon from "./_components/icons/angular-icon";
 import DomainlyLogo from "../../public/domainly.png";
 import Image from "next/image";
 import PsqlIcon from "./_components/icons/psql-icon";
+import OnboardJSIcon from "./_components/icons/onboardjs-icon";
 
 export default function Home() {
   return (
@@ -132,6 +134,29 @@ export default function Home() {
             </h2>
           </article>
           <article className="flex flex-col content-between space-y-2 rounded-b-lg bg-[#8b3043] p-[2%] text-white">
+            <ProjectDisplay
+              projectName={
+                <div className="inline-flex items-center">
+                  <OnboardJSIcon className="h-12 w-12" />
+                  <p className="ml-2 text-xl font-semibold">OnboardJS</p>
+                </div>
+              }
+              description="The OnboardJS headless typescript library with React hooks and integrations helps you build better onboarding experiences for your
+              apps faster and easier."
+              techIcons={[
+                <IconWithTooltip
+                  key="typescript"
+                  icon={<TypescriptIcon />}
+                  tooltipText="Typescript"
+                />,
+                <IconWithTooltip
+                  key="react"
+                  icon={<ReactIcon />}
+                  tooltipText="React"
+                />,
+              ]}
+              href="https://github.com/Somafet/onboardjs"
+            />
             <ProjectDisplay
               projectName={
                 <div className="inline-flex items-center">
