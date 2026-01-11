@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { IconWithTooltip } from "./icon-with-tooltip";
 import ExternalLinkIcon from "./icons/external-link-icon";
-import { type ReactNode } from "react";
+import { JSX, type ReactNode } from "react";
 
 type ProjectDisplayProps = {
   href?: string;
